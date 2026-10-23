@@ -44,6 +44,22 @@ export default function Home() {
           }),
         }}
       />
+      {/* Empresa que presta los servicios (B2B). Nombre de trabajo: el registro ante la Cámara de Comercio está pendiente. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Juan Villamoros - FullStack Developer S.A.S.",
+            url: SITE_URL,
+            founder: { "@type": "Person", name: "Juan Villamoros" },
+            address: { "@type": "PostalAddress", addressCountry: "CO" },
+            areaServed: "US",
+            description: "Colombian company providing full-stack software development to companies, on business-to-business contracts. One senior developer: Ruby on Rails, Python, integrations and AI agents.",
+          }),
+        }}
+      />
       <a className="skip" href="#works" data-i18n="skip">Skip to the works</a>
 
       <header className="topbar" id="top">

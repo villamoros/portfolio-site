@@ -9,6 +9,7 @@ Language: English and Spanish (the site switches language with the ES button).
 
 - Role: Software developer. Ruby on Rails, Python, JavaScript, REST APIs, AI agent integration.
 - Availability: available immediately, remote, Colombia time (UTC−5).
+- Engagements: business-to-business (B2B) through a Colombian company, working name "Juan Villamoros - FullStack Developer S.A.S.", for companies that need a full-stack developer. Juan is the only developer in the company.
 - CV (English, PDF): https://portfolio-site-ten-ashen-58.vercel.app/cv/Juan_Villamoros_CV_EN.pdf
 - CV (Spanish, PDF): https://portfolio-site-ten-ashen-58.vercel.app/cv/Juan_Villamoros_CV_ES.pdf
 
@@ -43,6 +44,7 @@ Spanish (native), English (intermediate), Portuguese (basic).
 
 - Rol: Desarrollador de software. Ruby on Rails, Python, JavaScript, APIs REST, integración de agentes de IA.
 - Disponibilidad: inmediata, remoto, hora de Colombia (UTC−5).
+- Contratación: empresa a empresa (B2B) a través de una empresa colombiana, nombre de trabajo "Juan Villamoros - FullStack Developer S.A.S.", para empresas que necesitan un desarrollador full-stack. Juan es el único desarrollador de la empresa.
 - CV (inglés, PDF): https://portfolio-site-ten-ashen-58.vercel.app/cv/Juan_Villamoros_CV_EN.pdf
 - CV (español, PDF): https://portfolio-site-ten-ashen-58.vercel.app/cv/Juan_Villamoros_CV_ES.pdf
 
