@@ -16,9 +16,11 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "Person",
             name: "Juan Villamoros",
-            jobTitle: "Systems Engineer",
-            description: "Systems engineer with a business-management background. Ruby on Rails, Python, integrations and AI agents.",
+            jobTitle: "Software Developer",
+            description: "Software developer from Colombia with a business-management background. Ruby on Rails APIs, third-party integrations, Python automation and AI agents. Remote, available immediately.",
             url: SITE_URL,
+            knowsAbout: ["Ruby on Rails", "Python", "REST APIs", "AI agents", "Docker", "AWS", "CI/CD", "Supabase", "PostgreSQL"],
+            knowsLanguage: ["Spanish", "English", "Portuguese"],
             address: { "@type": "PostalAddress", addressCountry: "CO" },
             alumniOf: ["Universidad del Pacífico", "Universidad Autónoma de Manizales", "Universidad Autónoma de Occidente"],
             sameAs: [
@@ -27,6 +29,18 @@ export default function Home() {
               "https://www.tiktok.com/@masoncodingarch",
               "https://www.youtube.com/@MasonCodingArch",
             ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Juan Villamoros",
+            url: SITE_URL,
+            inLanguage: ["en", "es"],
           }),
         }}
       />
@@ -82,7 +96,7 @@ export default function Home() {
               <span className="line">Juan</span>
               <span className="line indent">Villa<em>moros</em></span>
             </h1>
-            <p className="hero-lede" data-i18n="hero.lede">Systems engineer with a business-management background. I build Ruby on Rails APIs, integrations and AI&#8209;assisted automation for teams whose operations depend on software. I have also run the business side: sales, operations and customer service.</p>
+            <p className="hero-lede" data-i18n="hero.lede">Software developer with a business-management background. I build Ruby on Rails APIs, integrations and AI&#8209;assisted automation for teams whose operations depend on software. I have also run the business side: sales, operations and customer service.</p>
             <div className="hero-actions">
               <a className="btn primary" href="#commission" data-i18n="hero.cta">Work with me</a>
               <a className="btn ghost" href="#works" data-i18n="hero.cta2">See the projects ↓</a>
@@ -93,7 +107,7 @@ export default function Home() {
             <dt data-i18n="hero.p.title">Systems &amp; business</dt>
             <dd data-i18n="hero.p.year">2016 – present</dd>
             <dd data-i18n="hero.p.medium">Ruby on Rails, Python, integrations, AI agents, operations.</dd>
-            <dd className="status"><span className="dot" /><span data-i18n="hero.p.status">Available immediately · independent contractor</span></dd>
+            <dd className="status"><span className="dot" /><span data-i18n="hero.p.status">Available immediately · remote</span></dd>
           </dl>
         </section>
 
@@ -379,9 +393,10 @@ export default function Home() {
       </main>
 
       <footer className="foot">
-        <p>© <span id="year">2026</span> Juan Villamoros · <span data-i18n="foot">Made in Colombia, one careful commit at a time.</span></p>
-        <a href="#top" data-i18n="foot.top">Back to the entrance ↑</a>
+        <p>© <span id="year">2026</span> Juan Villamoros · <span data-i18n="foot">Idea → Experiencia Digital</span></p>
       </footer>
+
+      <button className="to-top" id="to-top" type="button" aria-label="Back to top">↑</button>
 
       {/* ============ VIEWER ============ */}
       <dialog id="viewer" className="viewer" aria-labelledby="viewer-title">

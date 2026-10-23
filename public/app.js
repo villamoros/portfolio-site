@@ -17,12 +17,12 @@
     "room.entrance": "Entrada", "room.about": "Sobre mí", "room.projects": "Proyectos", "room.side": "Side projects",
     "room.stack": "Stack", "room.experience": "Experiencia", "room.work": "Trabaja conmigo",
     "hero.eyebrow": "Disponible ahora · Remoto desde Colombia (UTC−5)",
-    "hero.lede": "Ingeniero de sistemas con formación en gestión de negocios. Construyo APIs en Ruby on Rails, integraciones y automatización con IA para equipos cuyas operaciones dependen del software. También he dirigido el lado comercial: ventas, operación y atención al cliente.",
+    "hero.lede": "Desarrollador de software con formación en gestión de negocios. Construyo APIs en Ruby on Rails, integraciones y automatización con IA para equipos cuyas operaciones dependen del software. También he dirigido el lado comercial: ventas, operación y atención al cliente.",
     "hero.cta": "Trabaja conmigo", "hero.cta2": "Ver los proyectos ↓",
     "hero.hint": "Mueve el cursor sobre el lienzo: a la izquierda el pincel, a la derecha la grilla.",
     "hero.p.title": "Sistemas y negocio", "hero.p.year": "2016 – hoy",
     "hero.p.medium": "Ruby on Rails, Python, integraciones, agentes de IA, operación.",
-    "hero.p.status": "Disponible de inmediato · contratista independiente",
+    "hero.p.status": "Disponible de inmediato · remoto",
     "statement.label": "Sobre mí",
     "statement.q": "Aprendí cómo funciona el software dirigiendo negocios primero. Ventas, atención al cliente y operación me enseñaron lo que cuesta un proceso roto. La ingeniería me enseñó a evitar que se rompa otra vez.",
     "statement.p1": "El software casi nunca falla donde todos lo revisaron. Falla en las costuras: un reintento sin idempotencia, un webhook que llega dos veces, un campo que vuelve vacío sin avisar. Ahí concentro mi trabajo, porque esas costuras son donde la operación pierde tiempo y los clientes pierden confianza.",
@@ -90,7 +90,7 @@
     "contact.label": "Contacto", "contact.title": "Escríbeme", "contact.lede": "Tu mensaje llega directo a mi correo. Te respondo desde mi cuenta.",
     "contact.name": "Nombre", "contact.email": "Correo", "contact.subject": "Asunto (opcional)", "contact.message": "Mensaje",
     "contact.cancel": "Cancelar", "contact.send": "Enviar mensaje",
-    "foot": "Hecho en Colombia, un commit cuidadoso a la vez.", "foot.top": "Volver a la entrada ↑",
+    "foot": "Idea → Experiencia Digital",
     "viewer.label": "Detalles", "viewer.note": "Sobre esta visual",
     "prev": "← Anterior", "next": "Siguiente →", "close": "Cerrar",
   };
@@ -158,6 +158,7 @@
     const b = document.getElementById("lang");
     b.textContent = lang === "es" ? "EN" : "ES";
     b.setAttribute("aria-label", lang === "es" ? "Switch to English" : "Cambiar a español");
+    document.getElementById("to-top")?.setAttribute("aria-label", lang === "es" ? "Volver arriba" : "Back to top");
     updateRoom(true);
   }
   document.getElementById("lang").addEventListener("click", () => {
@@ -478,4 +479,21 @@
   nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => set(false)));
   document.addEventListener("keydown", e => { if (e.key === "Escape") set(false); });
   matchMedia("(min-width: 981px)").addEventListener("change", e => { if (e.matches) set(false); });
+})();
+
+/* Ir arriba: el logo, los enlaces #top y el botón flotante. Se maneja en JS porque un ancla
+   no sube bien hasta el encabezado fijo y el desplazamiento suave del CSS puede no completarse. */
+(() => {
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+  const subir = e => {
+    e?.preventDefault();
+    window.scrollTo({ top: 0, behavior: reduce.matches ? "auto" : "smooth" });
+  };
+  document.querySelectorAll('a[href="#top"]').forEach(a => a.addEventListener("click", subir));
+  const b = document.getElementById("to-top");
+  if (!b) return;
+  b.addEventListener("click", subir);
+  const mostrar = () => b.classList.toggle("on", scrollY > 600);
+  addEventListener("scroll", mostrar, { passive: true });
+  mostrar();
 })();

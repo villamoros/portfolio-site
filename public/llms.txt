@@ -1,0 +1,74 @@
+# Juan Villamoros
+
+> Software developer from Colombia (UTC−5), available remotely and immediately. Builds Ruby on Rails APIs, third-party integrations, Python automation and AI agents. Has a business-management background: sales, operations and customer service.
+
+Website: https://portfolio-site-ten-ashen-58.vercel.app/
+Language: English and Spanish (the site switches language with the ES button).
+
+## Profile (English)
+
+- Role: Software developer. Ruby on Rails, Python, JavaScript, REST APIs, AI agent integration.
+- Availability: available immediately, remote, Colombia time (UTC−5).
+- CV (English, PDF): https://portfolio-site-ten-ashen-58.vercel.app/cv/Juan_Villamoros_CV_EN.pdf
+- CV (Spanish, PDF): https://portfolio-site-ten-ashen-58.vercel.app/cv/Juan_Villamoros_CV_ES.pdf
+
+### Experience
+
+- SITIC S.A.S. — Support Engineer, 2025 to August 2026. Software and hardware support for retail stores; incident triage and escalation by severity; SLA response-time monitoring.
+- Juzto.co — Application Support Analyst, 2023. Support across Zoho CRM, AWS S3 and Supabase; real-time diagnosis; incident documentation.
+- BairesDev — Ruby on Rails Software Engineer, 2021–2022. Medical appointment management system in Rails, integrated with Google Calendar; agile team.
+- Freelance — Full-Stack Developer, 2016–2021. Web applications for clients in Mexico, Spain and Argentina.
+- Business background: co-founder of a clothing brand (digital campaigns, sales, operations) and founder of a blockchain education venture (client training, tech advisory).
+
+### Skills
+
+Ruby, Ruby on Rails, Python, JavaScript; REST APIs; AI agent integration; process automation with n8n and Robocorp; Docker; AWS (S3); CI/CD; SecDevOps; Supabase (PostgreSQL); Zoho CRM; Google Calendar integration; UX/UI design; incident management and SLA compliance; agile teams.
+
+### Education
+
+- B.Eng. Systems Engineering, Universidad del Pacífico, 2016–2021.
+- Artificial Intelligence specialization, Universidad Autónoma de Occidente, 2024.
+- Project Management specialization, Corporación Universitaria de Asturias, 2022.
+- Business Management, Universidad Autónoma de Manizales, 2013–2017.
+
+### Projects
+
+- Rutero (2024, paused after Phase 2): web platform for day trips to remote areas of Colombia, starting on the Pacific coast. Phases 1 (research and planning) and 2 (MVP development) were reached; the MVP is not live.
+
+### Languages
+
+Spanish (native), English (intermediate), Portuguese (basic).
+
+## Perfil (Español)
+
+- Rol: Desarrollador de software. Ruby on Rails, Python, JavaScript, APIs REST, integración de agentes de IA.
+- Disponibilidad: inmediata, remoto, hora de Colombia (UTC−5).
+- CV (inglés, PDF): https://portfolio-site-ten-ashen-58.vercel.app/cv/Juan_Villamoros_CV_EN.pdf
+- CV (español, PDF): https://portfolio-site-ten-ashen-58.vercel.app/cv/Juan_Villamoros_CV_ES.pdf
+
+### Experiencia
+
+- SITIC S.A.S. — Ingeniero de soporte, 2025 a agosto de 2026. Soporte de software y hardware para tiendas de retail; triage de incidentes y escalamiento por severidad; monitoreo de tiempos de respuesta (SLA).
+- Juzto.co — Analista de soporte de aplicaciones, 2023. Soporte de Zoho CRM, AWS S3 y Supabase; diagnóstico en tiempo real; documentación de incidentes.
+- BairesDev — Ingeniero de software Ruby on Rails, 2021–2022. Sistema de gestión de citas médicas en Rails, integrado con Google Calendar; equipo ágil.
+- Freelance — Desarrollador full-stack, 2016–2021. Aplicaciones web para clientes en México, España y Argentina.
+- Trayectoria de negocio: cofundador de una marca de ropa (campañas digitales, ventas, operación) y fundador de un emprendimiento de educación en blockchain (formación de clientes, asesoría técnica).
+
+### Habilidades
+
+Ruby, Ruby on Rails, Python, JavaScript; APIs REST; integración de agentes de IA; automatización de procesos con n8n y Robocorp; Docker; AWS (S3); CI/CD; SecDevOps; Supabase (PostgreSQL); Zoho CRM; integración con Google Calendar; diseño UX/UI; gestión de incidentes y cumplimiento de SLA; equipos ágiles.
+
+### Formación
+
+- Ingeniería de Sistemas, Universidad del Pacífico, 2016–2021.
+- Especialización en Inteligencia Artificial, Universidad Autónoma de Occidente, 2024.
+- Especialización en Gerencia de Proyectos, Corporación Universitaria de Asturias, 2022.
+- Gestión de Negocios, Universidad Autónoma de Manizales, 2013–2017.
+
+### Proyectos
+
+- Rutero (2024, en pausa después de la Fase 2): plataforma web para pasadías a zonas remotas de Colombia, comenzando en la costa Pacífica. Se alcanzaron las fases 1 (investigación y planeación) y 2 (desarrollo del MVP); el MVP no está en producción.
+
+### Idiomas
+
+Español (nativo), inglés (intermedio), portugués (básico).

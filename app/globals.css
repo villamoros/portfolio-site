@@ -367,3 +367,11 @@ section { padding: clamp(80px, 12vw, 160px) var(--gutter) clamp(80px, 12vw, 160p
 /* CV según el idioma de la página: se muestra un solo botón de descarga */
 html[lang="es"] .cv-en { display: none; }
 html[lang="en"] .cv-es { display: none; }
+
+/* Botón flotante para volver arriba: aparece al bajar la página */
+.to-top { position: fixed; right: 20px; bottom: 20px; z-index: 45; width: 44px; height: 44px;
+  display: grid; place-items: center; border: 1px solid var(--ink); background: var(--paper); color: var(--ink);
+  font: 400 18px/1 var(--mono); cursor: pointer; opacity: 0; transform: translateY(8px); pointer-events: none;
+  transition: opacity .2s, transform .2s, background-color .2s, color .2s; }
+.to-top.on { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover, .to-top:focus-visible { background: var(--ink); color: var(--paper); outline: none; }
