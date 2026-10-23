@@ -376,19 +376,9 @@ html[lang="en"] .cv-es { display: none; }
 .to-top.on { opacity: 1; transform: none; pointer-events: auto; }
 .to-top:hover, .to-top:focus-visible { background: var(--ink); color: var(--paper); outline: none; }
 
-/* Frontend y Blockchain: franja de cuadros grandes que sale de la rejilla. Los cuadros son iguales a los demás;
-   solo cambia el contenido: en escritorio los stacks van como ladrillos, en móvil como el texto de los demás cuadros. */
-.bricks-band { display: grid; grid-template-columns: 1fr 1fr; margin-left: calc(-1 * (var(--gutter) + 24px));
-  margin-right: calc(-1 * var(--gutter)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-.stack-text { display: none; }
-.brick-wall { display: grid; margin-top: 4px; }
-.brick-row { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
-.brick { grid-column: span 2; margin: -1px 0 0 -1px; min-height: 58px; padding: 12px 10px; display: flex; align-items: center;
-  justify-content: center; text-align: center; border: 1px solid var(--line); font: 500 14px/1.2 var(--sans); color: inherit; }
-.brick-row.offset .brick:first-child { grid-column: 2 / span 2; }
-.swatch:hover .brick { border-color: rgba(255, 255, 255, .6); }
-@media (max-width: 980px) {
-  .bricks-band { grid-template-columns: 1fr; margin-left: 0; margin-right: 0; }
-  .brick-wall { display: none; }
-  .stack-text { display: block; }
+/* Frontend y Blockchain: dos cuadros anchos dentro del mismo marco, colocados como ladrillos (cada fila
+   desplazada media columna). Su contenido es el de cualquier otro cuadro. En móvil vuelven al flujo normal. */
+@media (min-width: 981px) {
+  .swatch.w-left { grid-column: span 2; }
+  .swatch.w-right { grid-column: 2 / span 2; }
 }
