@@ -45,7 +45,7 @@
     "w3.title": "Agentes y automatización", "w3.year": "Serie en curso", "w3.medium": "Python, n8n, Robocorp (RPA), agentes de IA",
     "w4.title": "Proyectos para clientes", "w4.where": "Freelance", "w4.medium": "Apps web full-stack · México, España, Argentina",
     "materials.label": "Stack", "materials.title": "Con qué trabajo",
-    "m.backend": "Backend", "m.ai": "IA y automatización", "m.ai.list": "Integración de agentes de IA · n8n · Robocorp (RPA) · flujos low-code",
+    "m.backend": "Backend", "m.frontend": "Frontend", "m.blockchain": "Blockchain", "m.ai": "IA y automatización", "m.ai.list": "Integración de agentes de IA · n8n · Robocorp (RPA) · flujos low-code",
     "m.data": "Datos e integraciones", "m.cloud": "Nube y entrega", "m.ops": "Operación",
     "m.ops.list": "Gestión de incidentes · cumplimiento de SLA · escalamiento · documentación técnica",
     "m.craft": "Negocio", "m.craft.list": "Diseño UX/UI · entrega ágil · comunicación con clientes · gestión de negocios",

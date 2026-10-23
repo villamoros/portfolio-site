@@ -239,6 +239,25 @@ export default function Home() {
               <p data-i18n="m.craft.list">UX/UI design · Agile delivery · client communication · business management</p>
             </article>
           </div>
+
+          <div className="bricks-band">
+            <article className="swatch sw-tint reveal" style={{ "--sw": "var(--teal)" } as CSSProperties}>
+              <span className="chip" aria-hidden="true" />
+              <h3 data-i18n="m.frontend">Frontend</h3>
+              <div className="brick-wall">
+                <div className="brick-row"><span className="brick">Ruby on Rails</span><span className="brick">Django</span><span className="brick">Reflex</span></div>
+                <div className="brick-row offset"><span className="brick">Next.js</span><span className="brick">React.js</span><span className="brick">Gin</span></div>
+              </div>
+            </article>
+            <article className="swatch sw-tint reveal" style={{ "--sw": "var(--violet)" } as CSSProperties}>
+              <span className="chip" aria-hidden="true" />
+              <h3 data-i18n="m.blockchain">Blockchain</h3>
+              <div className="brick-wall">
+                <div className="brick-row"><span className="brick">DApps</span><span className="brick">Smart Contracts</span><span className="brick">Solidity</span></div>
+                <div className="brick-row offset"><span className="brick">Exchanges</span></div>
+              </div>
+            </article>
+          </div>
         </section>
 
         {/* ============ PROVENANCE ============ */}

@@ -22,7 +22,7 @@ Language: English and Spanish (the site switches language with the ES button).
 
 ### Skills
 
-Ruby, Ruby on Rails, Python, JavaScript; REST APIs; AI agent integration; process automation with n8n and Robocorp; Docker; AWS (S3); CI/CD; SecDevOps; Supabase (PostgreSQL); Zoho CRM; Google Calendar integration; UX/UI design; incident management and SLA compliance; agile teams.
+Frontend: Ruby on Rails, Django, Reflex, Next.js, React.js, Gin. Blockchain: DApps, smart contracts, Solidity, exchanges. Backend: Ruby, Ruby on Rails, Python, JavaScript; REST APIs; AI agent integration; process automation with n8n and Robocorp; Docker; AWS (S3); CI/CD; SecDevOps; Supabase (PostgreSQL); Zoho CRM; Google Calendar integration; UX/UI design; incident management and SLA compliance; agile teams.
 
 ### Education
 
@@ -56,7 +56,7 @@ Spanish (native), English (intermediate), Portuguese (basic).
 
 ### Habilidades
 
-Ruby, Ruby on Rails, Python, JavaScript; APIs REST; integración de agentes de IA; automatización de procesos con n8n y Robocorp; Docker; AWS (S3); CI/CD; SecDevOps; Supabase (PostgreSQL); Zoho CRM; integración con Google Calendar; diseño UX/UI; gestión de incidentes y cumplimiento de SLA; equipos ágiles.
+Frontend: Ruby on Rails, Django, Reflex, Next.js, React.js, Gin. Blockchain: DApps, contratos inteligentes, Solidity, exchanges. Backend: Ruby, Ruby on Rails, Python, JavaScript; APIs REST; integración de agentes de IA; automatización de procesos con n8n y Robocorp; Docker; AWS (S3); CI/CD; SecDevOps; Supabase (PostgreSQL); Zoho CRM; integración con Google Calendar; diseño UX/UI; gestión de incidentes y cumplimiento de SLA; equipos ágiles.
 
 ### Formación
 
