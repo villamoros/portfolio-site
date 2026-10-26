@@ -92,6 +92,7 @@
     "contact.cancel": "Cancelar", "contact.send": "Enviar mensaje",
     "foot": "Idea → Experiencia Digital",
     "viewer.label": "Detalles", "viewer.note": "Sobre esta visual",
+    "viewer.demo": "Ver demo ↗",
     "prev": "← Anterior", "next": "Siguiente →", "close": "Cerrar",
   };
 
@@ -377,6 +378,8 @@
     document.getElementById("viewer-meta").textContent = d.meta;
     document.getElementById("viewer-body").textContent = d.body;
     document.getElementById("viewer-art-note").textContent = d.art;
+    // Ver demo: Rutero tiene su demo publicada; las demás, por ahora, llevan a la portada.
+    document.getElementById("demo").href = works[vIndex].li.dataset.art === "rutero" ? "https://rutero-mobile.vercel.app/" : "/#";
     vT = reduce ? 1 : 0;
   }
   function viewerLoop(now) {

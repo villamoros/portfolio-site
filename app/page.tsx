@@ -434,6 +434,9 @@ export default function Home() {
             <p className="viewer-meta" id="viewer-meta" />
             <p id="viewer-body" />
             <p className="viewer-note"><span data-i18n="viewer.note">About this visual</span> — <span id="viewer-art-note" /></p>
+            <p className="viewer-demo">
+              <a className="pill" id="demo" href="/#" target="_blank" rel="noopener noreferrer" data-i18n="viewer.demo">View demo ↗</a>
+            </p>
             <div className="viewer-nav">
               <button type="button" className="pill" id="prev" data-i18n="prev">← Previous</button>
               <button type="button" className="pill" id="next" data-i18n="next">Next →</button>
