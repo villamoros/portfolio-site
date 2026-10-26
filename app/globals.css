@@ -235,7 +235,7 @@ section { padding: clamp(80px, 12vw, 160px) var(--gutter) clamp(80px, 12vw, 160p
 #viewer-body { color: var(--ink-2); margin: 0 0 20px; }
 .viewer-note { font-size: 14px; color: var(--ink-3); border-top: 1px solid var(--line); padding-top: 16px; margin: 0 0 24px; }
 .viewer-note span:first-child { font-style: italic; font-family: var(--serif); color: var(--ink-2); }
-.viewer-demo { margin: 14px 0 0; }
+.viewer-demo { margin: 14px 0; }
 .viewer-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; }
 .viewer-nav .close { margin-left: auto; }
 
