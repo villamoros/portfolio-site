@@ -148,70 +148,70 @@ export default function Home() {
           </div>
 
           <ol className="wall">
-            <li className="work w-wide reveal" data-art="kanban">
+            <li className="work w-wide reveal" data-art="taller">
               <button className="frame" type="button" aria-haspopup="dialog" aria-controls="viewer" data-work="0">
                 <canvas className="art" aria-hidden="true" />
                 <span className="view" aria-hidden="true" data-i18n="view">View</span>
               </button>
               <dl className="placard">
-                <dt><span className="roman">I.</span> Shurikaizen</dt>
-                <dd>2026 · <span data-i18n="w0.status">paused</span></dd>
-                <dd data-i18n="w0.medium">Ruby on Rails (API-only), UUID keys, JWT</dd>
+                <dt><span className="roman">I.</span> El taller</dt>
+                <dd>2026 · <span data-i18n="w.indep">Independent project</span></dd>
+                <dd>Python · FastAPI · SQLite · Claude Agent SDK · Google APIs · Playwright</dd>
               </dl>
             </li>
-            <li className="work w-tall reveal" data-art="calendar">
+            <li className="work w-tall reveal" data-art="kanban">
               <button className="frame" type="button" aria-haspopup="dialog" aria-controls="viewer" data-work="1">
                 <canvas className="art" aria-hidden="true" />
                 <span className="view" aria-hidden="true" data-i18n="view">View</span>
               </button>
               <dl className="placard">
-                <dt><span className="roman">II.</span> <span data-i18n="w1.title">Appointments</span></dt>
-                <dd>2021 – 2022 · BairesDev</dd>
-                <dd data-i18n="w1.medium">Ruby on Rails, Google Calendar API</dd>
+                <dt><span className="roman">II.</span> Shurikapp</dt>
+                <dd>2025 · <span data-i18n="w0.status">paused</span></dd>
+                <dd data-i18n="w0.medium">Ruby on Rails (API-only), UUID keys, JWT</dd>
               </dl>
             </li>
-            <li className="work w-std reveal" data-art="signal">
+            <li className="work w-std reveal" data-art="rutero">
               <button className="frame" type="button" aria-haspopup="dialog" aria-controls="viewer" data-work="2">
                 <canvas className="art" aria-hidden="true" />
                 <span className="view" aria-hidden="true" data-i18n="view">View</span>
               </button>
               <dl className="placard">
-                <dt><span className="roman">III.</span> <span data-i18n="w2.title">Incident operations</span></dt>
-                <dd>2025 – 2026 · SITIC</dd>
-                <dd data-i18n="w2.medium">Incident triage, SLAs, escalation</dd>
+                <dt><span className="roman">III.</span> Rutero</dt>
+                <dd>2024 · <span data-i18n="w5.status">independent project · paused</span></dd>
+                <dd data-i18n="w5.medium">TypeScript · Node.js · Express.js · Next.js · Prisma · Clerk · AI agents</dd>
               </dl>
             </li>
-            <li className="work w-std reveal" data-art="flow">
+            <li className="work w-std reveal" data-art="taller">
               <button className="frame" type="button" aria-haspopup="dialog" aria-controls="viewer" data-work="3">
                 <canvas className="art" aria-hidden="true" />
                 <span className="view" aria-hidden="true" data-i18n="view">View</span>
               </button>
               <dl className="placard">
-                <dt><span className="roman">IV.</span> <span data-i18n="w3.title">Agents &amp; automation</span></dt>
-                <dd data-i18n="w3.year">Ongoing series</dd>
-                <dd data-i18n="w3.medium">Python, n8n, Robocorp (RPA), AI agents</dd>
+                <dt><span className="roman">IV.</span> RexFy</dt>
+                <dd>2023 · <span data-i18n="w.indep">Independent project</span></dd>
+                <dd>Next.js · TypeScript · FastAPI · PostgreSQL · Redis · Clerk</dd>
               </dl>
             </li>
-            <li className="work w-wide reveal" data-art="atlas">
+            <li className="work w-wide reveal" data-art="kovzu">
               <button className="frame" type="button" aria-haspopup="dialog" aria-controls="viewer" data-work="4">
                 <canvas className="art" aria-hidden="true" />
                 <span className="view" aria-hidden="true" data-i18n="view">View</span>
               </button>
               <dl className="placard">
-                <dt><span className="roman">V.</span> <span data-i18n="w4.title">Client projects</span></dt>
-                <dd>2016 – 2021 · <span data-i18n="w4.where">Freelance</span></dd>
-                <dd data-i18n="w4.medium">Full-stack web apps · Mexico, Spain, Argentina</dd>
+                <dt><span className="roman">V.</span> Kovzu</dt>
+                <dd>2022 · <span data-i18n="w.indep">Independent project</span></dd>
+                <dd>Rails 8 · Hotwire · Tailwind CSS 4 · PostgreSQL · Clerk</dd>
               </dl>
             </li>
-            <li className="work w-tall reveal" data-art="rutero">
+            <li className="work w-tall reveal" data-art="caviforj">
               <button className="frame" type="button" aria-haspopup="dialog" aria-controls="viewer" data-work="5">
                 <canvas className="art" aria-hidden="true" />
                 <span className="view" aria-hidden="true" data-i18n="view">View</span>
               </button>
               <dl className="placard">
-                <dt><span className="roman">VI.</span> Rutero</dt>
-                <dd>2024 · <span data-i18n="w5.status">independent project · paused</span></dd>
-                <dd data-i18n="w5.medium">TypeScript · Node.js · Express.js · Next.js · Prisma · Clerk · AI agents</dd>
+                <dt><span className="roman">VI.</span> Caviforj</dt>
+                <dd>2021 · <span data-i18n="w.indep">Independent project</span></dd>
+                <dd>Next.js 15 · React 19 · Prisma · Clerk · UploadThing</dd>
               </dl>
             </li>
           </ol>
@@ -306,8 +306,8 @@ export default function Home() {
             <h2 data-i18n="side.title">Two projects, both paused</h2>
           </div>
 
-          <article className="side-project reveal" id="shurikaizen">
-            <p className="label"><span>Shurikaizen</span><span>2026</span><span data-i18n="side.s.kind">Independent project · paused</span></p>
+          <article className="side-project reveal" id="shurikapp">
+            <p className="label"><span>Shurikapp</span><span>2025</span><span data-i18n="side.s.kind">Independent project · paused</span></p>
             <h3 data-i18n="side.s.p">A productivity platform for freelancers and remote teams that supports five methods at once: Kanban, Scrum, Shape Up, XP and Lean.</h3>
             <p className="side-stack" data-i18n="side.s.stack">Ruby on Rails (API-only) · UUID keys · JWT · Next.js front end planned</p>
             <h4 data-i18n="rutero.h">Milestones</h4>
@@ -434,11 +434,10 @@ export default function Home() {
             <p className="viewer-meta" id="viewer-meta" />
             <p id="viewer-body" />
             <p className="viewer-note"><span data-i18n="viewer.note">About this visual</span> — <span id="viewer-art-note" /></p>
-            <p className="viewer-demo">
-              <a className="pill" id="demo" href="/#" target="_blank" rel="noopener noreferrer" data-i18n="viewer.demo">View demo ↗</a>
-            </p>
             <div className="viewer-nav">
               <button type="button" className="pill" id="prev" data-i18n="prev">← Previous</button>
+              <a className="pill" id="demo" href="/#" target="_blank" rel="noopener noreferrer" data-i18n="viewer.demo">View demo ↗</a>
+              <a className="pill" id="codigo" href="/#" target="_blank" rel="noopener noreferrer" data-i18n="viewer.code">Code ↗</a>
               <button type="button" className="pill" id="next" data-i18n="next">Next →</button>
               <button type="button" className="pill close" id="close" data-i18n="close">Close</button>
             </div>

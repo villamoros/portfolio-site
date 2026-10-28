@@ -92,133 +92,65 @@
     "contact.cancel": "Cancelar", "contact.send": "Enviar mensaje",
     "foot": "Idea → Experiencia Digital",
     "viewer.label": "Detalles", "viewer.note": "Sobre esta visual",
-    "viewer.demo": "Ver demo ↗",
+    "viewer.demo": "Ver demo ↗", "viewer.code": "Código ↗", "w.indep": "Proyecto independiente",
     "prev": "← Anterior", "next": "Siguiente →", "close": "Cerrar",
   };
 
   const WORKS = {
     en: [
-      { n: "I.", title: "Shurikaizen", meta: "2026 · Independent project · work in progress",
+      { n: "I.", title: "El taller", meta: "2026 · Independent project · desktop app, running locally",
+        body: "A local job-search agent for Windows. It searches remote roles on job boards, scores them against my profile, prepares B2B proposals and cover letters as PDFs, and reviews the inbox for portfolio contacts. Nothing leaves the computer without my approval: every email, application or form waits in a queue until I say yes. Built with Python, FastAPI, SQLite, the Claude Agent SDK, Google APIs and Playwright, and packaged as a Windows executable.",
+        art: "A queue of pending actions on the left. Each one waits at a gate; only the approved ones pass through and become a document on the right. The agent proposes, the person decides.",
+        demo: "https://villamorosjuan.pythonanywhere.com/", code: "https://github.com/villamoros/el-taller-demo" },
+      { n: "II.", title: "Shurikapp", meta: "2025 · Independent project · work in progress",
         body: "A productivity platform for freelancers and remote teams that speaks five methods at once: Kanban, Scrum, Shape Up, XP and Lean. Built API-only in Ruby on Rails: the full data model lives in 23 migrations with UUID primary keys and complete models; JWT-authenticated API controllers are in progress, with a Next.js front end planned.",
-        art: "Five columns, one per method. Cards drift between them the way work moves between ways of working: the grid is the same, the rhythm changes." },
-      { n: "II.", title: "Appointments", meta: "2021 – 2022 · BairesDev · Ruby on Rails Software Engineer",
-        body: "A medical appointment management system built in Ruby on Rails and integrated with the Google Calendar API, delivered with an Agile team under high standards of code quality and client communication. Scheduling taught me that in healthcare the data model is the product: availability, cancellations and time zones are consistency problems before they are interface problems.",
-        art: "A month as a field of circles. Filled discs are booked, rings are open, crossed ones were cancelled — the sweep is the system reconciling the calendar." },
-      { n: "III.", title: "Incident operations", meta: "2025 – 2026 · SITIC S.A.S. · Support Engineer",
-        body: "Software and hardware support that kept points of sale running for Mattelsa, Studio F and ELA, plus incident triage, prioritization and escalation by severity for Monómeros, Olímpica, Dollarcity and Coéxito, with response and resolution times monitored against SLA commitments.",
-        art: "Several channels of signal at rest. When one spikes, a vermilion bracket marks the response window: the SLA drawn as a frame." },
-      { n: "IV.", title: "Agents & automation", meta: "Ongoing series · Python, n8n, Robocorp (RPA)",
-        body: "AI agent integration and process automation with Python, n8n and Robocorp, from low-code workflows to RPA. The same instinct runs through all of it: narrow, well-described steps, observable at every hop, so a person can see what the machine did and why.",
-        art: "A workflow graph. Small packets travel the edges and pause at each node, the way a well-built automation should: visible, inspectable, one step at a time." },
-      { n: "V.", title: "Client projects", meta: "2016 – 2021 · Freelance · Full-Stack Developer",
-        body: "Web applications and scalable solutions for clients in Mexico, Spain and Argentina, with requirements managed directly with each client and delivered on time and to quality standards.",
-        art: "An atlas drawn from Colombia: three arcs to Mexico, Spain and Argentina, plotted on a plain latitude–longitude grid." },
-      { n: "VI.", title: "Rutero", meta: "2024 · Independent project · paused after Phase 2",
+        art: "Five columns, one per method. Cards drift between them the way work moves between ways of working: the grid is the same, the rhythm changes.",
+        demo: "/#", code: "https://github.com/villamoros/shurikapp" },
+      { n: "III.", title: "Rutero", meta: "2024 · Independent project · paused after Phase 2",
         body: "A web platform for day trips (pasadías) to remote areas of Colombia, starting on the Pacific coast. One booking covers transport, lodging, local food and cultural and eco-activities. Built with TypeScript, Node.js, Express.js, Next.js, Prisma and Clerk, together with skills and AI agents. Phase 1 (research, architecture, wireframes and mockups) and Phase 2 (MVP development) were reached; the project is paused there.",
-        art: "A stretch of Pacific coast with four stops (transport, lodging, food, activity) joined into one itinerary. A point travels the route, the way one booking moves a traveller through all four." },
+        art: "A stretch of Pacific coast with four stops (transport, lodging, food, activity) joined into one itinerary. A point travels the route, the way one booking moves a traveller through all four.",
+        demo: "https://rutero-mobile.vercel.app/", code: "https://github.com/villamoros/rutero" },
+      { n: "IV.", title: "RexFy", meta: "2023 · Independent project",
+        body: "A B2B marketplace for recyclable materials that connects waste generators, buyers and transformers, and carriers, with logistics tracking, company profiles and trust signals. A modular monolith: a Next.js and TypeScript web app, a FastAPI API with SQLAlchemy and Alembic, PostgreSQL, Redis for background email workers, and Clerk for sign-in.",
+        art: "The same queue-and-gate drawing as El taller: listings and approvals wait at the gate, and only the ones that pass become a document.",
+        demo: "https://rexfy-web.vercel.app/", code: "https://github.com/villamoros/rexfy" },
+      { n: "V.", title: "Kovzu", meta: "2022 · Independent project",
+        body: "Order management for workshops, built on Rails 8 with Hotwire and Tailwind CSS 4. Each order moves from the quote through sample review, quality inspection, deviation reports and payments until delivery, with lot tracking and a design system documented in the repository. PostgreSQL for data and Clerk for sign-in.",
+        art: "Lanes of lots moving from quote to delivery. Each bar fills as its lot advances; the red mark is a deviation that has to be resolved before the lot can close.",
+        demo: "/#", code: "https://github.com/villamoros/kovzu" },
+      { n: "VI.", title: "Caviforj", meta: "2021 · Independent project",
+        body: "A course platform for teachers, with a teacher area for courses, lessons and file uploads. Built with Next.js 15, React 19, Prisma, Clerk for accounts and UploadThing for files, with drag-and-drop ordering of lessons.",
+        art: "A grid of lesson tiles. One is dragged to a new position and the rest make room, the way a teacher reorders a course without rebuilding it.",
+        demo: "/#", code: "https://github.com/villamoros/caviforj" },
     ],
     es: [
-      { n: "I.", title: "Shurikaizen", meta: "2026 · Proyecto independiente · obra en proceso",
+      { n: "I.", title: "El taller", meta: "2026 · Proyecto independiente · aplicación de escritorio en uso local",
+        body: "Un agente local para buscar empleo en Windows. Busca vacantes remotas en portales de empleo, las evalúa contra mi perfil, prepara propuestas B2B y cartas de presentación en PDF, y revisa el correo de los contactos del portafolio. Nada sale de la computadora sin mi aprobación: cada correo, postulación o formulario espera en una cola hasta que lo apruebo. Construido con Python, FastAPI, SQLite, el SDK de Claude, las APIs de Google y Playwright, y empaquetado como ejecutable de Windows.",
+        art: "Una cola de acciones pendientes a la izquierda. Cada una espera en una compuerta; solo las aprobadas la atraviesan y se convierten en documento a la derecha. El agente propone, la persona decide.",
+        demo: "https://villamorosjuan.pythonanywhere.com/", code: "https://github.com/villamoros/el-taller-demo" },
+      { n: "II.", title: "Shurikapp", meta: "2025 · Proyecto independiente · obra en proceso",
         body: "Una plataforma de productividad para freelancers y equipos remotos que habla cinco métodos a la vez: Kanban, Scrum, Shape Up, XP y Lean. Construida solo como API en Ruby on Rails: el modelo de datos completo vive en 23 migraciones con llaves primarias UUID y modelos completos; los controladores con autenticación JWT están en progreso y el front end en Next.js está planeado.",
-        art: "Cinco columnas, una por método. Las tarjetas se mueven entre ellas como el trabajo se mueve entre formas de trabajar: la grilla es la misma, el ritmo cambia." },
-      { n: "II.", title: "Citas", meta: "2021 – 2022 · BairesDev · Ingeniero de software Ruby on Rails",
-        body: "Un sistema de gestión de citas médicas en Ruby on Rails integrado con la API de Google Calendar, entregado con un equipo ágil y altos estándares de calidad de código y comunicación con el cliente. Agendar me enseñó que en salud el modelo de datos es el producto: disponibilidad, cancelaciones y zonas horarias son problemas de consistencia antes que de interfaz.",
-        art: "Un mes como un campo de círculos. Los discos llenos están reservados, los anillos libres y los tachados se cancelaron; el barrido es el sistema conciliando el calendario." },
-      { n: "III.", title: "Operación de incidentes", meta: "2025 – 2026 · SITIC S.A.S. · Ingeniero de soporte",
-        body: "Soporte de software y hardware para mantener operando los puntos de venta de Mattelsa, Studio F y ELA, y triage, priorización y escalamiento de incidentes por severidad para Monómeros, Olímpica, Dollarcity y Coéxito, con tiempos de respuesta y resolución medidos contra el SLA.",
-        art: "Varios canales de señal en reposo. Cuando uno se dispara, un corchete bermellón marca la ventana de respuesta: el SLA dibujado como marco." },
-      { n: "IV.", title: "Agentes y automatización", meta: "Serie en curso · Python, n8n, Robocorp (RPA)",
-        body: "Integración de agentes de IA y automatización de procesos con Python, n8n y Robocorp, desde flujos low-code hasta RPA. El mismo instinto atraviesa todo: pasos acotados y bien descritos, observables en cada salto, para que una persona vea qué hizo la máquina y por qué.",
-        art: "Un grafo de flujo. Pequeños paquetes recorren las aristas y se detienen en cada nodo, como debe hacerlo una buena automatización: visible, revisable, paso a paso." },
-      { n: "V.", title: "Proyectos para clientes", meta: "2016 – 2021 · Freelance · Desarrollador full-stack",
-        body: "Aplicaciones web y soluciones escalables para clientes en México, España y Argentina, con los requerimientos gestionados directamente con cada cliente y entregadas a tiempo y con calidad.",
-        art: "Un atlas trazado desde Colombia: tres arcos hacia México, España y Argentina sobre una grilla simple de latitud y longitud." },
-      { n: "VI.", title: "Rutero", meta: "2024 · Proyecto independiente · en pausa tras la fase 2",
+        art: "Cinco columnas, una por método. Las tarjetas se mueven entre ellas como el trabajo se mueve entre formas de trabajar: la grilla es la misma, el ritmo cambia.",
+        demo: "/#", code: "https://github.com/villamoros/shurikapp" },
+      { n: "III.", title: "Rutero", meta: "2024 · Proyecto independiente · en pausa tras la fase 2",
         body: "Plataforma web de pasadías para zonas remotas de Colombia, empezando por el Pacífico. Una sola reserva cubre transporte, hospedaje, alimentación local y actividades culturales y ecológicas. Construida con TypeScript, Node.js, Express.js, Next.js, Prisma y Clerk, junto con skills y agentes de IA. Se alcanzaron la fase 1 (investigación, arquitectura, wireframes y mockups) y la fase 2 (desarrollo del MVP); el proyecto quedó pausado ahí.",
-        art: "Un tramo de costa del Pacífico con cuatro paradas (transporte, hospedaje, comida, actividad) unidas en un solo itinerario. Un punto recorre la ruta, como una sola reserva lleva al viajero por las cuatro." },
+        art: "Un tramo de costa del Pacífico con cuatro paradas (transporte, hospedaje, comida, actividad) unidas en un solo itinerario. Un punto recorre la ruta, como una sola reserva lleva al viajero por las cuatro.",
+        demo: "https://rutero-mobile.vercel.app/", code: "https://github.com/villamoros/rutero" },
+      { n: "IV.", title: "RexFy", meta: "2023 · Proyecto independiente",
+        body: "Marketplace B2B de materiales reciclables que conecta generadores de residuos, compradores, transformadores y transportistas, con seguimiento logístico, perfiles de empresa y señales de confianza. Monolito modular: una app web en Next.js y TypeScript, una API en FastAPI con SQLAlchemy y Alembic, PostgreSQL, Redis para los workers de correo y Clerk para el ingreso.",
+        art: "El mismo dibujo de cola y compuerta que El taller: las publicaciones y las aprobaciones esperan en la compuerta, y solo las que pasan se convierten en documento.",
+        demo: "https://rexfy-web.vercel.app/", code: "https://github.com/villamoros/rexfy" },
+      { n: "V.", title: "Kovzu", meta: "2022 · Proyecto independiente",
+        body: "Gestión de pedidos para talleres, construida en Rails 8 con Hotwire y Tailwind CSS 4. Cada pedido avanza desde la cotización hasta la entrega, pasando por la revisión de muestras, la inspección de calidad, las actas de desviación y los pagos, con seguimiento por lotes y un sistema de diseño documentado en el repositorio. PostgreSQL para los datos y Clerk para el ingreso.",
+        art: "Carriles de lotes que avanzan de la cotización a la entrega. Cada barra se llena al avanzar su lote; la marca roja es una desviación que hay que resolver antes de cerrar el lote.",
+        demo: "/#", code: "https://github.com/villamoros/kovzu" },
+      { n: "VI.", title: "Caviforj", meta: "2021 · Proyecto independiente",
+        body: "Una plataforma de cursos para docentes, con un área de profesor para cursos, lecciones y carga de archivos. Construida con Next.js 15, React 19, Prisma, Clerk para las cuentas y UploadThing para los archivos, con ordenamiento de lecciones por arrastrar y soltar.",
+        art: "Una cuadrícula de lecciones. Una se arrastra a otra posición y las demás hacen lugar, como un docente reordena un curso sin rehacerlo.",
+        demo: "/#", code: "https://github.com/villamoros/caviforj" },
     ],
   };
 
-  const EN = {};
-  document.querySelectorAll("[data-i18n]").forEach(el => { EN[el.dataset.i18n] = el.innerHTML; });
-  document.querySelectorAll("[data-i18n-html]").forEach(el => { EN[el.dataset.i18nHtml] = el.innerHTML; });
-  EN["c.copied"] = "copied";
-  document.querySelectorAll("[data-room-key]").forEach(el => {
-    const k = el.dataset.roomKey; EN[k] = k.split(".")[1].replace(/^\w/, c => c.toUpperCase());
-  });
-  EN["room.side"] = "Side projects";
-
-  let lang = new URLSearchParams(location.search).get("lang") || store.get("jv-lang") ||
-             ((navigator.language || "").startsWith("es") ? "es" : "en");
-  const t = k => (lang === "es" ? ES[k] : EN[k]) ?? EN[k] ?? k;
-
-  function applyLang() {
-    document.documentElement.lang = lang;
-    document.querySelectorAll("[data-i18n]").forEach(el => { el.innerHTML = t(el.dataset.i18n); });
-    document.querySelectorAll("[data-i18n-html]").forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); });
-    const b = document.getElementById("lang");
-    b.textContent = lang === "es" ? "EN" : "ES";
-    b.setAttribute("aria-label", lang === "es" ? "Switch to English" : "Cambiar a español");
-    document.getElementById("to-top")?.setAttribute("aria-label", lang === "es" ? "Volver arriba" : "Back to top");
-    updateRoom(true);
-  }
-  document.getElementById("lang").addEventListener("click", () => {
-    lang = lang === "es" ? "en" : "es"; store.set("jv-lang", lang); applyLang();
-  });
-
-  /* ------------------------------------------------------------ tema */
-  const root = document.documentElement;
-  const saved = store.get("jv-theme");
-  if (saved) root.dataset.theme = saved;
-  document.getElementById("theme").addEventListener("click", () => {
-    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
-    root.dataset.theme = dark ? "light" : "dark"; store.set("jv-theme", root.dataset.theme);
-    redrawAll();
-  });
-  matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", () => redrawAll());
-  const css = v => getComputedStyle(root).getPropertyValue(v).trim();
-  const pal = () => ({ ink: css("--ink"), ink3: css("--ink-3"), mat: css("--mat"), paper: css("--paper"),
-    red: css("--vermilion"), blue: css("--ultramarine"), ochre: css("--ochre"), green: css("--viridian"), rose: css("--rose"),
-    line: css("--line"), frame: css("--frame") });
-
-  /* ------------------------------------------------------------ sala actual, barra, aparición */
-  const rooms = [...document.querySelectorAll("[data-room]")];
-  let currentRoom = rooms[0];
-  function updateRoom(force) {
-    const mid = innerHeight * 0.45;
-    const r = rooms.find(s => { const b = s.getBoundingClientRect(); return b.top <= mid && b.bottom > mid; }) || currentRoom;
-    if (r !== currentRoom || force) {
-      currentRoom = r;
-      document.getElementById("room-num").textContent = r.dataset.room;
-      document.getElementById("room-name").textContent = t(r.dataset.roomKey);
-      document.querySelectorAll(".topbar nav a").forEach(a => a.classList.toggle("active", a.hash === "#" + r.id));
-    }
-    document.querySelector(".topbar").classList.toggle("scrolled", scrollY > 40);
-  }
-  addEventListener("scroll", () => updateRoom(false), { passive: true });
-
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-  }), { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
-  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
-
-  /* ------------------------------------------------------------ utilidades de dibujo */
-  function rng(seed) { return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let x = Math.imul(seed ^ seed >>> 15, 1 | seed);
-    x = x + Math.imul(x ^ x >>> 7, 61 | x) ^ x; return ((x ^ x >>> 14) >>> 0) / 4294967296; }; }
-  function fit(canvas) {
-    const dpr = Math.min(devicePixelRatio || 1, 2);
-    const w = canvas.clientWidth, h = canvas.clientHeight;
-    if (canvas.width !== Math.round(w * dpr) || canvas.height !== Math.round(h * dpr)) {
-      canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
-    }
-    const ctx = canvas.getContext("2d"); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    return { ctx, w, h };
-  }
-  const ease = x => 1 - Math.pow(1 - Math.min(Math.max(x, 0), 1), 3);
-  const alpha = (hex, a) => { const c = hex.replace("#", ""); const n = parseInt(c.length === 3 ? c.replace(/./g, "$&$&") : c, 16);
-    return `rgba(${n >> 16 & 255},${n >> 8 & 255},${n & 255},${a})`; };
-
-  /* ------------------------------------------------------------ obras generativas */
   const ART = {
     kanban(ctx, w, h, t, p) {
       const R = rng(7), cols = 5, gap = w * 0.02, cw = (w - gap * (cols + 1)) / cols;
@@ -305,6 +237,73 @@
       ctx.fillStyle = p.ink; ctx.beginPath(); ctx.arc(hx, hy, 7, 0, Math.PI * 2); ctx.fill();
       ctx.strokeStyle = p.ink; ctx.beginPath(); ctx.arc(hx, hy, 12 + 6 * Math.sin(t * 4), 0, Math.PI * 2); ctx.stroke();
     },
+    taller(ctx, w, h, t, p) {
+      // Cola de acciones: cada una espera en la compuerta; solo las aprobadas pasan y se vuelven documento.
+      const gx = w * .5, ix = w * .08, ox = w * .72, iw = w * .2, ih = h * .085;
+      ctx.lineWidth = Math.max(1.5, w * .005);
+      ctx.strokeStyle = p.red; ctx.setLineDash([6, 6]);
+      ctx.beginPath(); ctx.moveTo(gx, h * .08); ctx.lineTo(gx, h * .92); ctx.stroke(); ctx.setLineDash([]);
+      for (let i = 0; i < 5; i++) {
+        const y = h * (.16 + i * .16), q = (t * .32 + i * .21) % 1, tope = gx - iw / 2;
+        let x, aprobada;
+        if (q < .5) { x = ix + (tope - ix) * ease(q * 2); aprobada = false; }
+        else { x = tope + (ox - tope) * ease((q - .5) * 2); aprobada = true; }
+        ctx.fillStyle = aprobada ? alpha(p.blue, .85) : p.mat;
+        ctx.strokeStyle = p.ink; ctx.fillRect(x, y, iw, ih); ctx.strokeRect(x, y, iw, ih);
+      }
+      // documento de salida: las líneas son el texto generado
+      ctx.strokeStyle = p.ink; ctx.lineWidth = Math.max(1.5, w * .004);
+      ctx.strokeRect(ox, h * .12, w * .2, h * .76);
+      for (let j = 0; j < 4; j++) { ctx.fillStyle = alpha(p.ink, .35); ctx.fillRect(ox + w * .03, h * (.22 + j * .12), w * .14, Math.max(2, h * .012)); }
+    },
+    kovzu(ctx, w, h, t, p) {
+      // Lotes avanzando de la cotización a la entrega. La marca roja es una desviación que hay que resolver antes de cerrar.
+      const x0 = w * .1, x1 = w * .9, etapas = 6, filas = 5;
+      const xs = i => x0 + (x1 - x0) * i / (etapas - 1);
+      for (let r = 0; r < filas; r++) {
+        const y = h * (.16 + r * .17), q = (t * .28 + r * .19) % 1, desviacion = r === 2;
+        ctx.strokeStyle = alpha(p.ink, .3); ctx.lineWidth = 1.2;
+        ctx.beginPath(); ctx.moveTo(x0, y); ctx.lineTo(x1, y); ctx.stroke();
+        for (let e = 0; e < etapas; e++) { ctx.beginPath(); ctx.moveTo(xs(e), y - h * .03); ctx.lineTo(xs(e), y + h * .03); ctx.stroke(); }
+        const fin = x0 + (x1 - x0) * Math.min(q * 1.25, 1);
+        ctx.fillStyle = desviacion ? p.red : p.blue;
+        ctx.fillRect(x0, y - h * .025, fin - x0, h * .05);
+        if (desviacion && q > .6) {
+          ctx.beginPath(); ctx.arc(xs(3), y - h * .07, Math.max(4, w * .012), 0, Math.PI * 2);
+          ctx.fillStyle = p.red; ctx.fill();
+        }
+      }
+    },
+    caviforj(ctx, w, h, t, p) {
+      // Un curso como cuadrícula de lecciones: una se arrastra a otra posición y las demás hacen lugar.
+      const cols = 3, m = w * .1, gx = (w - m * 2) / cols, gy = (h - m * 2) / cols;
+      const cell = Math.min(gx, gy) * .78;
+      const slot = s => ({ x: m + (s % cols) * gx + (gx - cell) / 2, y: m + Math.floor(s / cols) * gy + (gy - cell) / 2 });
+      const at = v => { const i = Math.floor(v), f = v - i, a = slot(i), b = slot(Math.min(8, i + 1));
+        return { x: a.x + (b.x - a.x) * f, y: a.y + (b.y - a.y) * f }; };
+      const desde = 4, hasta = 1, ciclo = (t * .3) % 1, tri = 1 - Math.abs(2 * ciclo - 1), d = ease(tri);
+      const dibujar = (pt, arrastrada) => {
+        ctx.fillStyle = arrastrada ? alpha(p.blue, .9) : p.mat;
+        ctx.strokeStyle = p.ink; ctx.lineWidth = 1.4;
+        if (arrastrada) { ctx.shadowColor = alpha(p.ink, .25); ctx.shadowBlur = cell * .15; ctx.shadowOffsetY = cell * .06; }
+        ctx.beginPath(); ctx.roundRect ? ctx.roundRect(pt.x, pt.y, cell, cell, cell * .1) : ctx.rect(pt.x, pt.y, cell, cell);
+        ctx.fill(); ctx.stroke(); ctx.shadowBlur = 0; ctx.shadowOffsetY = 0;
+        ctx.fillStyle = alpha(p.ink, .3);
+        ctx.fillRect(pt.x + cell * .14, pt.y + cell * .62, cell * .6, Math.max(2, cell * .05));
+        ctx.fillRect(pt.x + cell * .14, pt.y + cell * .74, cell * .4, Math.max(2, cell * .05));
+      };
+      // hueco donde estaba la lección arrastrada
+      const origen = slot(desde);
+      ctx.setLineDash([5, 5]); ctx.strokeStyle = alpha(p.ink, .45); ctx.lineWidth = 1.2;
+      ctx.strokeRect(origen.x, origen.y, cell, cell); ctx.setLineDash([]);
+      for (let j = 0; j < 9; j++) {
+        if (j === desde) continue;
+        const v = j >= hasta && j < desde ? j + d : j;
+        dibujar(at(v), false);
+      }
+      const a = slot(desde), b = slot(hasta);
+      dibujar({ x: a.x + (b.x - a.x) * d, y: a.y + (b.y - a.y) * d }, true);
+    },
     rutero(ctx, w, h, t, p) {
       // Costa del Pacífico: olas arriba, arena abajo y una ruta de pasadía con cuatro paradas.
       ctx.lineWidth = 1; ctx.strokeStyle = alpha(p.blue, .4);
@@ -378,8 +377,8 @@
     document.getElementById("viewer-meta").textContent = d.meta;
     document.getElementById("viewer-body").textContent = d.body;
     document.getElementById("viewer-art-note").textContent = d.art;
-    // Ver demo: Rutero tiene su demo publicada; las demás, por ahora, llevan a la portada.
-    document.getElementById("demo").href = works[vIndex].li.dataset.art === "rutero" ? "https://rutero-mobile.vercel.app/" : "/#";
+    document.getElementById("demo").href = d.demo;
+    document.getElementById("codigo").href = d.code;
     vT = reduce ? 1 : 0;
   }
   function viewerLoop(now) {
