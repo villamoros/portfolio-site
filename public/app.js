@@ -151,6 +151,86 @@
     ],
   };
 
+  const EN = {};
+  document.querySelectorAll("[data-i18n]").forEach(el => { EN[el.dataset.i18n] = el.innerHTML; });
+  document.querySelectorAll("[data-i18n-html]").forEach(el => { EN[el.dataset.i18nHtml] = el.innerHTML; });
+  EN["c.copied"] = "copied";
+  document.querySelectorAll("[data-room-key]").forEach(el => {
+    const k = el.dataset.roomKey; EN[k] = k.split(".")[1].replace(/^\w/, c => c.toUpperCase());
+  });
+  EN["room.side"] = "Side projects";
+
+  let lang = new URLSearchParams(location.search).get("lang") || store.get("jv-lang") ||
+             ((navigator.language || "").startsWith("es") ? "es" : "en");
+  const t = k => (lang === "es" ? ES[k] : EN[k]) ?? EN[k] ?? k;
+
+  function applyLang() {
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-i18n]").forEach(el => { el.innerHTML = t(el.dataset.i18n); });
+    document.querySelectorAll("[data-i18n-html]").forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); });
+    const b = document.getElementById("lang");
+    b.textContent = lang === "es" ? "EN" : "ES";
+    b.setAttribute("aria-label", lang === "es" ? "Switch to English" : "Cambiar a español");
+    document.getElementById("to-top")?.setAttribute("aria-label", lang === "es" ? "Volver arriba" : "Back to top");
+    updateRoom(true);
+  }
+  document.getElementById("lang").addEventListener("click", () => {
+    lang = lang === "es" ? "en" : "es"; store.set("jv-lang", lang); applyLang();
+  });
+
+  /* ------------------------------------------------------------ tema */
+  const root = document.documentElement;
+  const saved = store.get("jv-theme");
+  if (saved) root.dataset.theme = saved;
+  document.getElementById("theme").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark"; store.set("jv-theme", root.dataset.theme);
+    redrawAll();
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", () => redrawAll());
+  const css = v => getComputedStyle(root).getPropertyValue(v).trim();
+  const pal = () => ({ ink: css("--ink"), ink3: css("--ink-3"), mat: css("--mat"), paper: css("--paper"),
+    red: css("--vermilion"), blue: css("--ultramarine"), ochre: css("--ochre"), green: css("--viridian"), rose: css("--rose"),
+    line: css("--line"), frame: css("--frame") });
+
+  /* ------------------------------------------------------------ sala actual, barra, aparición */
+  const rooms = [...document.querySelectorAll("[data-room]")];
+  let currentRoom = rooms[0];
+  function updateRoom(force) {
+    const mid = innerHeight * 0.45;
+    const r = rooms.find(s => { const b = s.getBoundingClientRect(); return b.top <= mid && b.bottom > mid; }) || currentRoom;
+    if (r !== currentRoom || force) {
+      currentRoom = r;
+      document.getElementById("room-num").textContent = r.dataset.room;
+      document.getElementById("room-name").textContent = t(r.dataset.roomKey);
+      document.querySelectorAll(".topbar nav a").forEach(a => a.classList.toggle("active", a.hash === "#" + r.id));
+    }
+    document.querySelector(".topbar").classList.toggle("scrolled", scrollY > 40);
+  }
+  addEventListener("scroll", () => updateRoom(false), { passive: true });
+
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+  }), { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+  /* ------------------------------------------------------------ utilidades de dibujo */
+  function rng(seed) { return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let x = Math.imul(seed ^ seed >>> 15, 1 | seed);
+    x = x + Math.imul(x ^ x >>> 7, 61 | x) ^ x; return ((x ^ x >>> 14) >>> 0) / 4294967296; }; }
+  function fit(canvas) {
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    if (canvas.width !== Math.round(w * dpr) || canvas.height !== Math.round(h * dpr)) {
+      canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+    }
+    const ctx = canvas.getContext("2d"); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return { ctx, w, h };
+  }
+  const ease = x => 1 - Math.pow(1 - Math.min(Math.max(x, 0), 1), 3);
+  const alpha = (hex, a) => { const c = hex.replace("#", ""); const n = parseInt(c.length === 3 ? c.replace(/./g, "$&$&") : c, 16);
+    return `rgba(${n >> 16 & 255},${n >> 8 & 255},${n & 255},${a})`; };
+
+  /* ------------------------------------------------------------ obras generativas */
   const ART = {
     kanban(ctx, w, h, t, p) {
       const R = rng(7), cols = 5, gap = w * 0.02, cw = (w - gap * (cols + 1)) / cols;
