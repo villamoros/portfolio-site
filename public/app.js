@@ -11,10 +11,10 @@
   /* ------------------------------------------------------------ textos */
   const ES = {
     "skip": "Ir a las obras",
-    "menu.btn": "Menú", "nav.side": "Side projects",
+    "menu.btn": "Menú", "nav.side": "Índice de proyectos",
     "nav.statement": "Sobre mí", "nav.works": "Proyectos", "nav.materials": "Stack",
     "nav.provenance": "Experiencia", "nav.commission": "Trabaja conmigo",
-    "room.entrance": "Entrada", "room.about": "Sobre mí", "room.projects": "Proyectos", "room.side": "Side projects",
+    "room.entrance": "Entrada", "room.about": "Sobre mí", "room.projects": "Proyectos", "room.side": "Índice de proyectos",
     "room.stack": "Stack", "room.experience": "Experiencia", "room.work": "Trabaja conmigo",
     "hero.eyebrow": "Disponible ahora · Remoto desde Colombia (UTC−5)",
     "hero.lede": "Desarrollador de software con formación en gestión de negocios. Construyo APIs en Ruby on Rails, integraciones y automatización con IA para equipos cuyas operaciones dependen del software. También he dirigido el lado comercial: ventas, operación y atención al cliente.",
@@ -32,7 +32,15 @@
     "view": "Ver",
     "w0.status": "en pausa", "w0.medium": "Ruby on Rails (solo API), llaves UUID, JWT",
     "w5.status": "proyecto independiente · en pausa", "w5.medium": "TypeScript · Node.js · Express.js · Next.js · Prisma · Clerk · agentes de IA",
-    "side.label": "Side projects", "side.title": "Dos proyectos, ambos en pausa",
+    "side.label": "Índice de proyectos", "side.title": "Seis proyectos, del más reciente al más antiguo",
+    "side.lead": "Todo lo que he construido por mi cuenta, en orden de fecha. Cada uno enlaza a su código y, cuando está en línea, a su demo.",
+    "side.st.local": "En uso local", "side.st.paused": "En pausa", "side.st.paused2": "En pausa tras la fase 2", "side.st.indep": "Proyecto independiente",
+    "side.p1": "Agente local de búsqueda de empleo con cola de aprobación, PDFs y pipeline B2B.",
+    "side.p2": "Plataforma de productividad para freelancers y equipos remotos: cinco métodos en una sola API.",
+    "side.p3": "Plataforma de reservas de pasadías a zonas remotas de Colombia: una reserva para todo.",
+    "side.p4": "Marketplace B2B de materiales reciclables: generadores, compradores, transformadores y transportistas.",
+    "side.p5": "Gestión de pedidos para talleres, de la cotización a la entrega, con desviaciones de calidad.",
+    "side.p6": "Plataforma de cursos para docentes, con lecciones, archivos y orden por arrastre.",
     "side.r.kind": "Proyecto independiente · en pausa", "side.r.stack": "TypeScript · Node.js · Express.js · Next.js · Prisma · Clerk · skills y agentes de IA",
     "side.s.kind": "Proyecto independiente · en pausa",
     "side.s.p": "Plataforma de productividad para freelancers y equipos remotos que soporta cinco métodos a la vez: Kanban, Scrum, Shape Up, XP y Lean.",
@@ -112,7 +120,7 @@
         demo: "https://rutero-mobile.vercel.app/", code: "https://github.com/villamoros/rutero" },
       { n: "IV.", title: "RexFy", meta: "2023 · Independent project",
         body: "A B2B marketplace for recyclable materials that connects waste generators, buyers and transformers, and carriers, with logistics tracking, company profiles and trust signals. A modular monolith: a Next.js and TypeScript web app, a FastAPI API with SQLAlchemy and Alembic, PostgreSQL, Redis for background email workers, and Clerk for sign-in.",
-        art: "The same queue-and-gate drawing as El taller: listings and approvals wait at the gate, and only the ones that pass become a document.",
+        art: "A materials loop: waste enters at the generator, changes at each station and returns to the market as recycled material. Ochre is raw, green is recycled.",
         demo: "https://rexfy-web.vercel.app/", code: "https://github.com/villamoros/rexfy" },
       { n: "V.", title: "Kovzu", meta: "2022 · Independent project",
         body: "Order management for workshops, built on Rails 8 with Hotwire and Tailwind CSS 4. Each order moves from the quote through sample review, quality inspection, deviation reports and payments until delivery, with lot tracking and a design system documented in the repository. PostgreSQL for data and Clerk for sign-in.",
@@ -138,7 +146,7 @@
         demo: "https://rutero-mobile.vercel.app/", code: "https://github.com/villamoros/rutero" },
       { n: "IV.", title: "RexFy", meta: "2023 · Proyecto independiente",
         body: "Marketplace B2B de materiales reciclables que conecta generadores de residuos, compradores, transformadores y transportistas, con seguimiento logístico, perfiles de empresa y señales de confianza. Monolito modular: una app web en Next.js y TypeScript, una API en FastAPI con SQLAlchemy y Alembic, PostgreSQL, Redis para los workers de correo y Clerk para el ingreso.",
-        art: "El mismo dibujo de cola y compuerta que El taller: las publicaciones y las aprobaciones esperan en la compuerta, y solo las que pasan se convierten en documento.",
+        art: "Un circuito de materiales: el residuo entra por el generador, cambia en cada estación y vuelve al mercado como material reciclado. Ocre es crudo; verde, reciclado.",
         demo: "https://rexfy-web.vercel.app/", code: "https://github.com/villamoros/rexfy" },
       { n: "V.", title: "Kovzu", meta: "2022 · Proyecto independiente",
         body: "Gestión de pedidos para talleres, construida en Rails 8 con Hotwire y Tailwind CSS 4. Cada pedido avanza desde la cotización hasta la entrega, pasando por la revisión de muestras, la inspección de calidad, las actas de desviación y los pagos, con seguimiento por lotes y un sistema de diseño documentado en el repositorio. PostgreSQL para los datos y Clerk para el ingreso.",
@@ -158,7 +166,7 @@
   document.querySelectorAll("[data-room-key]").forEach(el => {
     const k = el.dataset.roomKey; EN[k] = k.split(".")[1].replace(/^\w/, c => c.toUpperCase());
   });
-  EN["room.side"] = "Side projects";
+  EN["room.side"] = "Project index";
 
   let lang = new URLSearchParams(location.search).get("lang") || store.get("jv-lang") ||
              ((navigator.language || "").startsWith("es") ? "es" : "en");
@@ -335,6 +343,33 @@
       ctx.strokeStyle = p.ink; ctx.lineWidth = Math.max(1.5, w * .004);
       ctx.strokeRect(ox, h * .12, w * .2, h * .76);
       for (let j = 0; j < 4; j++) { ctx.fillStyle = alpha(p.ink, .35); ctx.fillRect(ox + w * .03, h * (.22 + j * .12), w * .14, Math.max(2, h * .012)); }
+    },
+    rexfy(ctx, w, h, t, p) {
+      // Circuito de materiales: el residuo entra por el generador, cambia en cada estación y vuelve al mercado reciclado.
+      const cx = w * .5, cy = h * .53, r = Math.min(w, h) * .32, cuadro = w * .05;
+      ctx.strokeStyle = p.line; ctx.lineWidth = Math.max(1.5, w * .004);
+      ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.stroke();
+      ctx.setLineDash([3, 7]); ctx.strokeStyle = alpha(p.ink, .25);
+      ctx.beginPath(); ctx.arc(cx, cy, r * .58, 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([]);
+      // Estaciones del circuito: generador, transformador, comprador y transportista.
+      const estaciones = [[-Math.PI / 2, p.ochre], [0, p.blue], [Math.PI / 2, p.rose], [Math.PI, p.green]];
+      // Mercado en el centro: por aquí pasa todo lo que se compra y se vende.
+      const activa = Math.floor(t * .5) % estaciones.length;
+      ctx.strokeStyle = alpha(p.ink, .35 + .3 * Math.sin(t * 6)); ctx.lineWidth = 1.2;
+      ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx + r * Math.cos(estaciones[activa][0]), cy + r * Math.sin(estaciones[activa][0])); ctx.stroke();
+      ctx.fillStyle = p.ink; ctx.fillRect(cx - cuadro / 2, cy - cuadro / 2, cuadro, cuadro);
+      for (const [ang, color] of estaciones) {
+        const x = cx + r * Math.cos(ang) - cuadro / 2, y = cy + r * Math.sin(ang) - cuadro / 2;
+        ctx.fillStyle = color; ctx.fillRect(x, y, cuadro, cuadro);
+        ctx.strokeStyle = p.ink; ctx.strokeRect(x, y, cuadro, cuadro);
+      }
+      // Material: cada punto recorre el anillo; en la mitad del camino ya está transformado y pasa a verde.
+      const dot = Math.max(3, w * .013);
+      for (let k = 0; k < 9; k++) {
+        const q = (t * .09 + k / 9) % 1, ang = -Math.PI / 2 + q * Math.PI * 2;
+        ctx.fillStyle = q > .5 ? p.green : p.ochre;
+        ctx.beginPath(); ctx.arc(cx + r * Math.cos(ang), cy + r * Math.sin(ang), dot, 0, Math.PI * 2); ctx.fill();
+      }
     },
     kovzu(ctx, w, h, t, p) {
       // Lotes avanzando de la cotización a la entrega. La marca roja es una desviación que hay que resolver antes de cerrar.
@@ -540,7 +575,7 @@
 
   /* ------------------------------------------------------------ copiar correo, año, redibujar */
   document.getElementById("copy-mail").addEventListener("click", async () => {
-    try { await navigator.clipboard.writeText("villamorosjuan@gmail.com"); } catch { return; }
+    try { await navigator.clipboard.writeText("jobs@villamoros.tech"); } catch { return; }
     const l = document.querySelector(".copy-label"); l.textContent = t("c.copied");
     setTimeout(() => { l.textContent = t("c.copy"); }, 1600);
   });

@@ -91,7 +91,7 @@ export default function Home() {
         <a href="#works" data-i18n="nav.works">Projects</a>
         <a href="#materials" data-i18n="nav.materials">Stack</a>
         <a href="#provenance" data-i18n="nav.provenance">Experience</a>
-        <a href="#side-projects" data-i18n="nav.side">Side projects</a>
+        <a href="#side-projects" data-i18n="nav.side">Project index</a>
         <a href="#commission" className="nav-cta" data-i18n="nav.commission">Work with me</a>
       </nav>
 
@@ -181,7 +181,7 @@ export default function Home() {
                 <dd data-i18n="w5.medium">TypeScript · Node.js · Express.js · Next.js · Prisma · Clerk · AI agents</dd>
               </dl>
             </li>
-            <li className="work w-std reveal" data-art="taller">
+            <li className="work w-std reveal" data-art="rexfy">
               <button className="frame" type="button" aria-haspopup="dialog" aria-controls="viewer" data-work="3">
                 <canvas className="art" aria-hidden="true" />
                 <span className="view" aria-hidden="true" data-i18n="view">View</span>
@@ -299,51 +299,112 @@ export default function Home() {
           </ol>
         </section>
 
-        {/* ============ SIDE PROJECTS ============ */}
-        <section className="side-projects" id="side-projects" data-room="06" data-room-key="room.side">
+        {/* ============ PROJECT INDEX (06) ============ */}
+        <section className="project-index" id="side-projects" data-room="06" data-room-key="room.side">
           <div className="section-head">
-            <p className="label"><span>06</span><span data-i18n="side.label">Side projects</span></p>
-            <h2 data-i18n="side.title">Two projects, both paused</h2>
+            <p className="label"><span>06</span><span data-i18n="side.label">Project index</span></p>
+            <h2 data-i18n="side.title">Six projects, newest first</h2>
+            <p className="lead" data-i18n="side.lead">Everything I have built on my own, in order of date. Each one links to its code and, when it is online, to its demo.</p>
           </div>
-
-          <article className="side-project reveal" id="shurikapp">
-            <p className="label"><span>Shurikapp</span><span>2025</span><span data-i18n="side.s.kind">Independent project · paused</span></p>
-            <h3 data-i18n="side.s.p">A productivity platform for freelancers and remote teams that supports five methods at once: Kanban, Scrum, Shape Up, XP and Lean.</h3>
-            <p className="side-stack" data-i18n="side.s.stack">Ruby on Rails (API-only) · UUID keys · JWT · Next.js front end planned</p>
-            <h4 data-i18n="rutero.h">Milestones</h4>
-            <ol>
-              <li>
-                <strong data-i18n="rutero.m1.h">Phase 1 · Research and planning</strong>
-                <span data-i18n="side.s.m1">API-only architecture and data model: 23 migrations with UUID primary keys and complete models.</span>
-                <em data-i18n="rutero.reached">Reached</em>
-              </li>
-              <li>
-                <strong data-i18n="rutero.m2.h">Phase 2 · MVP development</strong>
-                <span data-i18n="side.s.m2">JWT-authenticated API controllers, still in progress when the project was paused.</span>
-                <em data-i18n="side.s.inprog">In progress · paused</em>
-              </li>
-            </ol>
-          </article>
-        <article className="side-project reveal" id="rutero">
-            <p className="label"><span>Rutero</span><span>2024</span><span data-i18n="side.r.kind">Independent project · paused</span></p>
-            <h3 data-i18n="rutero.p">Web platform for day trips (pasadías) to remote areas of Colombia, starting on the Pacific coast. One booking covers transport, lodging, local food and cultural and eco-activities, with a focus on supporting local communities and sustainable tourism.</h3>
-            <p className="side-stack" data-i18n="side.r.stack">TypeScript · Node.js · Express.js · Next.js · Prisma · Clerk · skills and AI agents</p>
-            <h4 data-i18n="rutero.h">Milestones</h4>
-            <ol>
-              <li>
-                <strong data-i18n="rutero.m1.h">Phase 1 · Research and planning</strong>
-                <span data-i18n="rutero.m1">Functional and non-functional requirements, system architecture, wireframes and mockups.</span>
-                <em data-i18n="rutero.reached">Reached</em>
-              </li>
-              <li>
-                <strong data-i18n="rutero.m2.h">Phase 2 · MVP development</strong>
-                <span data-i18n="rutero.m2">Search and booking, payments and profiles, provider panel, map and payment gateway integrations.</span>
-                <em data-i18n="rutero.last">Reached · last phase so far</em>
-              </li>
-            </ol>
-          </article>
-
-          </section>
+          <ol className="pindex">
+            <li className="reveal">
+              <div className="prow">
+                <span className="pn">I.</span>
+                <h3 className="pname">El taller</h3>
+                <span className="pyear">2026</span>
+              </div>
+              <p className="pdesc" data-i18n="side.p1">Local job-search agent with an approval queue, PDFs and a B2B pipeline.</p>
+              <div className="pmeta">
+                <span className="pstatus" data-i18n="side.st.local">Running locally</span>
+                <span className="pstack">Python · FastAPI · SQLite · Claude Agent SDK · Google APIs · Playwright</span>
+              </div>
+              <p className="plinks">
+                <a href="https://github.com/villamoros/el-taller-demo" target="_blank" rel="noopener noreferrer" data-i18n="viewer.code">Code ↗</a>
+                <a href="https://villamorosjuan.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" data-i18n="viewer.demo">View demo ↗</a>
+              </p>
+            </li>
+            <li className="reveal">
+              <div className="prow">
+                <span className="pn">II.</span>
+                <h3 className="pname">Shurikapp</h3>
+                <span className="pyear">2025</span>
+              </div>
+              <p className="pdesc" data-i18n="side.p2">Productivity platform for freelancers and remote teams: five methods in one API.</p>
+              <div className="pmeta">
+                <span className="pstatus" data-i18n="side.st.paused">Paused</span>
+                <span className="pstack">Ruby on Rails (API) · JWT · UUID · Next.js planned</span>
+              </div>
+              <p className="plinks">
+                <a href="https://github.com/villamoros/shurikapp" target="_blank" rel="noopener noreferrer" data-i18n="viewer.code">Code ↗</a>
+                
+              </p>
+            </li>
+            <li className="reveal">
+              <div className="prow">
+                <span className="pn">III.</span>
+                <h3 className="pname">Rutero</h3>
+                <span className="pyear">2024</span>
+              </div>
+              <p className="pdesc" data-i18n="side.p3">Booking platform for day trips to remote areas of Colombia: one booking for everything.</p>
+              <div className="pmeta">
+                <span className="pstatus" data-i18n="side.st.paused2">Paused after phase 2</span>
+                <span className="pstack">TypeScript · Node.js · Express.js · Next.js · Prisma · Clerk</span>
+              </div>
+              <p className="plinks">
+                <a href="https://github.com/villamoros/rutero" target="_blank" rel="noopener noreferrer" data-i18n="viewer.code">Code ↗</a>
+                <a href="https://rutero-mobile.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="viewer.demo">View demo ↗</a>
+              </p>
+            </li>
+            <li className="reveal">
+              <div className="prow">
+                <span className="pn">IV.</span>
+                <h3 className="pname">RexFy</h3>
+                <span className="pyear">2023</span>
+              </div>
+              <p className="pdesc" data-i18n="side.p4">B2B marketplace for recyclable materials: generators, buyers, transformers and carriers.</p>
+              <div className="pmeta">
+                <span className="pstatus" data-i18n="side.st.indep">Independent project</span>
+                <span className="pstack">Next.js · TypeScript · FastAPI · PostgreSQL · Redis · Clerk</span>
+              </div>
+              <p className="plinks">
+                <a href="https://github.com/villamoros/rexfy" target="_blank" rel="noopener noreferrer" data-i18n="viewer.code">Code ↗</a>
+                <a href="https://rexfy-web.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="viewer.demo">View demo ↗</a>
+              </p>
+            </li>
+            <li className="reveal">
+              <div className="prow">
+                <span className="pn">V.</span>
+                <h3 className="pname">Kovzu</h3>
+                <span className="pyear">2022</span>
+              </div>
+              <p className="pdesc" data-i18n="side.p5">Order management for workshops, from quote to delivery, with quality deviations.</p>
+              <div className="pmeta">
+                <span className="pstatus" data-i18n="side.st.indep">Independent project</span>
+                <span className="pstack">Rails 8 · Hotwire · Tailwind CSS 4 · PostgreSQL · Clerk</span>
+              </div>
+              <p className="plinks">
+                <a href="https://github.com/villamoros/kovzu" target="_blank" rel="noopener noreferrer" data-i18n="viewer.code">Code ↗</a>
+                
+              </p>
+            </li>
+            <li className="reveal">
+              <div className="prow">
+                <span className="pn">VI.</span>
+                <h3 className="pname">Caviforj</h3>
+                <span className="pyear">2021</span>
+              </div>
+              <p className="pdesc" data-i18n="side.p6">Course platform for teachers, with lessons, uploads and drag-and-drop ordering.</p>
+              <div className="pmeta">
+                <span className="pstatus" data-i18n="side.st.indep">Independent project</span>
+                <span className="pstack">Next.js 15 · React 19 · Prisma · Clerk · UploadThing</span>
+              </div>
+              <p className="plinks">
+                <a href="https://github.com/villamoros/caviforj" target="_blank" rel="noopener noreferrer" data-i18n="viewer.code">Code ↗</a>
+                
+              </p>
+            </li>
+          </ol>
+        </section>
 
         {/* ============ CONTENT ============ */}
         <section className="content" id="content" data-room="07" data-room-key="room.content">
@@ -411,7 +472,7 @@ export default function Home() {
               <a className="btn ghost cv-en" href="cv/Juan_Villamoros_CV_EN.pdf" download="Juan_Villamoros_CV_EN.pdf">Download CV (PDF)</a>
               <a className="btn ghost cv-es" href="cv/Juan_Villamoros_CV_ES.pdf" download="Juan_Villamoros_CV_ES.pdf">Descargar CV (PDF)</a>
               <button className="copy" type="button" id="copy-mail">
-                <span className="mono">villamorosjuan@gmail.com</span> <span data-i18n="c.copy" className="copy-label">copy</span>
+                <span className="mono">jobs@villamoros.tech</span> <span data-i18n="c.copy" className="copy-label">copy</span>
               </button>
             </div>
           </div>

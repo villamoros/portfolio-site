@@ -2,10 +2,9 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 // El destino es fijo: el mensaje siempre llega a este correo, nunca a una dirección que escriba el visitante.
-const TO = "villamorosjuan@gmail.com";
-// Remitente de prueba de Resend: solo entrega al correo dueño de la cuenta (el de arriba).
-// Cuando tengas un dominio verificado, cámbialo aquí.
-const FROM = "Portafolio <onboarding@resend.dev>";
+const TO = "jobs@villamoros.tech";
+// Remitente del dominio verificado en Resend (villamoros.tech).
+const FROM = "Portafolio <jobs@villamoros.tech>";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // Protecciones anti-abuso

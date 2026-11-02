@@ -280,19 +280,7 @@ section { padding: clamp(80px, 12vw, 160px) var(--gutter) clamp(80px, 12vw, 160p
 }
 
 /* Rutero: proyecto independiente, bajo la sección de proyectos */
-.side-project { max-width: 64ch; margin: 64px 0 0; padding-top: 36px; border-top: 1px solid var(--line); }
-.side-project .label span:first-child { color: var(--vermilion); }
-.side-project h3 { font: 400 clamp(20px, 2.4vw, 26px)/1.35 var(--serif); margin: 0 0 28px; color: var(--ink); }
-.side-project h4 { font: 400 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 16px; }
-.side-project ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; }
-.side-project li { display: grid; gap: 4px; padding-left: 16px; border-left: 2px solid var(--line); }
-.side-project li strong { font-weight: 500; color: var(--ink); }
-.side-project li span { color: var(--ink-2); font-size: 15px; }
-.side-project li em { font: 400 11px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; font-style: normal; color: var(--vermilion); }
 
-/* Side projects: mismo formato de fases que Rutero */
-.side-project .label span:first-child { color: var(--vermilion); }
-.side-stack { font: 400 12px/1.5 var(--mono); letter-spacing: .06em; color: var(--ink-3); margin: -8px 0 28px; }
 
 /* Menú móvil: botón en la barra y panel con el estilo de la página */
 .menu-btn { display: none; }
@@ -397,4 +385,27 @@ html[lang="en"] .cv-es { display: none; }
 }
 @media (max-width: 980px) {
   .palette > * { grid-column: auto; grid-row: auto; }
+}
+
+/* Índice de proyectos (sección 06) */
+.project-index .lead { max-width: 56ch; color: var(--ink-2); margin: 18px 0 0; }
+.pindex { list-style: none; margin: 48px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.pindex li { padding: 28px 0 30px; border-bottom: 1px solid var(--line); transition: padding-left .5s var(--ease); }
+.pindex li:hover { padding-left: 14px; }
+.prow { display: grid; grid-template-columns: 64px 1fr auto; align-items: baseline; gap: 16px; }
+.pn { font: 400 13px/1 var(--mono); color: var(--vermilion); }
+.pname { font: 300 clamp(34px, 5.4vw, 66px)/1 var(--serif); letter-spacing: -.025em; transition: color .4s var(--ease); }
+.pindex li:hover .pname { color: var(--vermilion); }
+.pyear { font: 400 14px/1 var(--mono); color: var(--ink-3); }
+.pdesc { margin: 16px 0 0 80px; max-width: 60ch; color: var(--ink-2); }
+.pmeta { margin: 12px 0 0 80px; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+.pstatus { font: 400 11px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; border: 1px solid var(--line); border-radius: 99px; padding: 7px 11px; }
+.pstack { font: 400 12px/1.5 var(--mono); letter-spacing: .04em; color: var(--ink-3); }
+.plinks { margin: 16px 0 0 80px; display: flex; gap: 18px; flex-wrap: wrap; }
+.plinks a { font: 400 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 3px; transition: color .3s, border-color .3s; }
+.plinks a:hover { color: var(--vermilion); border-color: var(--vermilion); }
+@media (max-width: 699px) {
+  .prow { grid-template-columns: 44px 1fr; }
+  .pyear { grid-column: 2; }
+  .pdesc, .pmeta, .plinks { margin-left: 0; }
 }
