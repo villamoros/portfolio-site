@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import Script from "next/script";
 import ContactForm from "./contact-form";
+import { REDES } from "./redes";
 import { SITE_URL } from "./site";
 
 // Marcado del portafolio. Los IDs y clases son los que usa public/app.js
@@ -481,6 +482,13 @@ export default function Home() {
 
       <footer className="foot">
         <p>© <span id="year">2026</span> Juan Villamoros · <span data-i18n="foot">Idea → Experiencia Digital</span></p>
+        <nav className="foot-social" aria-label="Redes sociales">
+          {REDES.map((red) => (
+            <a key={red.nombre} href={red.url} target="_blank" rel="noopener noreferrer" aria-label={red.nombre} title={red.nombre}>
+              <svg viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d={red.trazo} /></svg>
+            </a>
+          ))}
+        </nav>
       </footer>
 
       <button className="to-top" id="to-top" type="button" aria-label="Back to top">↑</button>
